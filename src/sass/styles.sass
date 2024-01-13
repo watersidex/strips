@@ -1,0 +1,210 @@
+@mixin media($size)
+    @media screen and (min-width:#{$size}px)
+        @content
+
+@import component/header
+@import component/main
+@import component/footer
+
+html
+    font-size: 1px
+
+body
+    margin: 0
+    font-family: Rubik
+    font-size: 16rem
+    background-color: #f5f8fa
+
+hr
+    margin-top: 35px
+    border: 1px solid transparent
+    border-top-color: #e4e4ec
+
+.wrapper
+    margin: 0 auto
+    max-width: 1171px
+
+.top
+    background-image: url(../img/sea.png)
+    background-size: cover
+    background-position: center
+
+a
+    text-decoration: none
+
+    &:hover
+        cursor: pointer, url('../img/cursors/star.cur')
+
+ul, li
+    padding: 0
+    list-style: none
+
+.burMenu
+    width: 25rem
+    height: 25rem
+    border: 5rem solid blue
+    display: none
+
+    +media(568px)
+        display: block
+h1
+    color: blue
+
+.topmenu
+    display: flex
+    justify-content: space-between
+    align-items: center
+
+.menu ul
+    display: flex
+    flex-wrap: wrap
+    flex-direction: column
+    flex-direction: row
+    justify-content: flex-end
+
+.menu li
+    display: inline-block
+    padding: 15px
+
+.menu a
+    color: white
+    transition: 1s all ease
+
+    &:hover
+        color: #ffb700
+
+.midtop
+    position: relative
+
+.transp
+    position: absolute
+    opacity: 0.200
+    width: 370px
+    height: 335px
+    left: 50%
+    bottom: 155px
+    transform: translateX(-50%)
+    border: 4px solid #fff
+
+.midtop,
+.buttop
+    text-align: center
+    padding: 190px 0
+
+.midtop h1
+    color: white
+    text-align: center
+    font-size: 72px
+    text-transform: uppercase
+
+.midtop p,
+.buttop p,
+.wavefeed p
+    color: white
+    font-size: 16px
+    font-style: italic
+    text-align: center
+
+.butt
+    display: inline-block
+    text-transform: uppercase
+    text-decoration: none
+    text-align: center
+    color: #fdfcfb
+    padding: 20px 30px
+    margin: auto
+    border-radius: 30px
+    filter: drop-shadow(0px 4px 10.5px rgba(193, 139, 1, 0.24))
+    background-color: #ffb700
+    transition: all 1s ease
+
+    &:hover
+        color: #ffb700
+        background-color: #fff
+
+.buttop h2
+    font-size: 36px
+    text-transform: uppercase
+
+.buttop h2,
+.buttop p
+    color: #333
+
+.middle
+    margin: 70px 0
+
+.cards
+    display: flex
+    flex-direction: row
+    text-align: center
+    flex-wrap: wrap
+
+    +media(568)
+        flex-wrap: nowrap
+
+.card h4
+    font-size: 18px
+    color: #333
+
+.card h5
+    font-size: 24px
+    color: #0099ff
+
+.card p,
+.small
+    font-size: 13px
+    color: #999
+
+.card img
+    width: 55px
+    height: 50px
+    text-align: center
+
+.card
+    margin: 0 30px
+    width: 270px
+    height: 269px
+    transition: all 1s ease
+    padding: 15px
+
+    &:hover
+        background-color: #fff
+        filter: drop-shadow(0px 4px 10.5px rgba(3,20,31,0.05))
+
+.maincard
+    text-align: left
+    margin-right: 50px
+
+.maincard h4,
+.taicontent h4
+    font-size: 36px
+    margin: 0
+    text-transform: uppercase
+    color: #333
+
+.big
+    color: #333
+    font-size: 16px
+    font-style: italic
+
+.plans
+    text-align: right
+    font-size: 12px
+    text-transform: uppercase
+    color: #0099ff
+
+.pricard
+    width: 287px
+    height: 169px
+    margin: 0
+    background-color: #edf2f5
+
+.blue
+    color: #0099ff
+    background-color: #f5f8fa
+    border: 2px solid #0099ff
+    filter: drop-shadow(0px 4px 10.5px rgba(3,20,31,0.05))
+
+    &:hover
+        color: #fff
+        background-color: #0099ff

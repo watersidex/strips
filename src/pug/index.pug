@@ -1,0 +1,67 @@
+doctype html
+include component/mixin
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title S.trips
+        link(rel="stylesheet", href="css/styles.css")
+        link(href="https://fonts.googleapis.com/css2?family=Maven+Pro&family=Montserrat:wght@500&family=Rubik&display=swap", rel="stylesheet")
+        
+    body 
+        header.top 
+            .wrapper
+                .topmenu 
+                    .logo
+                        img(src="../img/logo.png", alt="logo")
+                    .menu 
+                        +menu(topmenu)
+                    .burMenu
+                .midtop 
+                    h1 Морські пригоди
+                    p Не важливо, чи Ваша мандрівка належить до елітного рівня чи до економваріанту, туроператор S trips потурбується, щоб Ви залишились задоволеними!
+                    a(href="#").butt детальніше
+                    .transp
+                .buttop
+                    h2 обери свій план подорожі
+                    p Наша фірма - лідер на ринку у своїй сфері
+                    img(alt="angle", src="../img/angle.png")     
+        main.middle
+            .wrapper 
+                .cards 
+                    .maincard 
+                        h4 про нашу компанію
+                        p.big Наша компанія пропонує ряд цікавих-розважальних послуг, які принесуть вам ряд вражень!
+                        a(href="#").butt детальніше
+                        p.small * - зверніть увагу, зміна ціни може залежати від курсу долара.
+                    +priceCards(cards)
+                p.plans дивитись усі плани ➲
+                hr
+                .tai 
+                    .taiimg
+                        img(alt="острів", src="../img/tai.png")
+                    .taicontent 
+                        h4 Дивовижний безлюдний острів, який зводить людей з розуму
+                        .taicontainer
+                            p.big Пхукет - курортно-туристична Мекка Таїланду. Білосніжний пісок, і бірюзове море, і мальовничі скелі, а на них же, трохи вище - буйна тропічна рослинність. Все це можна побачити на власні очі.
+                            a(href="#").butt замовити тур
+                            a(href="#").butt.blue детальніше
+                        .card.pricard
+                            h5 575 грн./день
+                            p.small В дану вартість входить обслуговування персоналу, вечеря і захоплюючі історії.
+            .wave
+                .wrapper
+                    .waveflex
+                        .wavemain 
+                            h4 СПІЙМАЙ ХВИЛЮ 
+                                span ЖИВИ ЯСКРАВО!
+                            p Полюбляєш екстрим та пригоди? Тоді тобі точно до нас! Мрієш стати на сапборд, але ніяк не міг наважитсь? Наші досвдчені інструктори навчать тебе вміло «піймати хвилі» та відчути себе справжнім сьорфером!
+                            a(href="#").butt детальніше
+                        .wavefeed  
+                            p Чудова туристична фірма, що повністю виправдала мої очікування від подорожі. Я був приємно вражений екскурсіями, що для мене підібрали, працюють спражні професіонали своєї справи. 
+                            p Олег Набережний
+                            p.small клієнт
+                            img(alt="фото", src="../img/photo.png")
+
+        footer 
+            p &copy; 2016 Cars.com All rights reserved.

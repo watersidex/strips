@@ -1,0 +1,1 @@
+const rel=document.querySelector(".burMenu"),nav=document.querySelector(".menu");rel.onclick=function(){nav.classList.toggle("menuOpen"),rel.classList.toggle("burOpen")};

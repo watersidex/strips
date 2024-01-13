@@ -1,0 +1,47 @@
+.tai
+    display: flex
+
+    &content
+        display: flex
+        flex-wrap: wrap
+        width: 100%
+        
+        h4
+            width: 100%
+
+    &container
+        width: calc( 100% - 317px)
+
+    &img img
+        width: 370px
+        height: 270px
+
+.wave
+    background-image: url('../img/wave.png')
+    background-size: cover
+    background-position: center
+
+    &flex
+        display: flex
+
+    &main
+        width: 100%
+        color: #fff
+
+        +media(728)
+            width: 50%
+
+        span
+            color: #0099ff
+
+        h4
+            font-size: 56px
+            letter-spacing: 2px
+            text-transform: uppercase
+
+    &feed
+        width: 100%
+        color: #fff
+
+        +media(728)
+            width: 50%

@@ -1,0 +1,60 @@
+-
+    let topmenu = [
+        {
+            name: 'ГОЛОВНА ',
+            url: '#'
+            },{
+            name: 'ПОСЛУГИ ',
+            url: '#'
+            },{
+            name: 'ПРО КОМПАНІЮ ',
+            url: '#'
+            },{
+            name: 'АКЦІЇ ',
+            url: '#'
+            },{
+            name: 'ПАРТНЕРИ ',
+            url: '#'
+            },{
+            name: 'ВІДГУКИ ',
+            url: '#'
+            },{
+            name: 'КОНТАКТИ',
+            url: '#'
+        }
+    ]
+
+mixin menu (items)
+    ul 
+        for item in items 
+            li 
+                a(href=item.url) #{item.name} 
+
+-
+    let cards=[
+        {
+            name: 'Тур на велосипедах', 
+            img: 'img/bic.png',
+            price: '335 грн*',
+            p: 'Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.'
+        }, {
+            name: 'Екскурсія на острів', 
+            img: 'img/round.png',
+            price: '500 грн*',
+            p: 'Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .'
+        }, {
+            name: 'Особливе замовлення', 
+            img: 'img/pers.png',
+            price: '250 грн.*',
+            p: 'Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.'
+        }
+    ]
+
+mixin priceCards (items)
+    .cards
+        for item in items
+            div.card
+                img(src=item.img, alt="")
+                h4 #{item.name}
+                h5 #{item.price}
+                p #{item.p}
