@@ -58,3 +58,39 @@ mixin priceCards (items)
                 h4 #{item.name}
                 h5 #{item.price}
                 p #{item.p}
+
+-
+    let price=[
+        {
+            name: 'Романтична подорож на 2', 
+            img: 'img/price/fortwo.png',
+            price: '2599 грн.',
+            p: 'Подорож у найромантичніші куточки світу, занурить вас у дивовижні пейзажі природи.'
+        }, {
+            name: 'Велотур', 
+            img: 'img/price/bike.png',
+            price: '555 грн.',
+            p: 'Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!'
+        }, {
+            name: 'На острови!', 
+            img: 'img/price/tropic.png',
+            price: '1559 грн.',
+            p: 'Хочеш зануритись у тишу, місце де не має натовпу, та панує дмка природа? Тоді вперед за пригодами!'
+        }, {
+            name: 'Катання на сьорфінгу', 
+            img: 'img/price/surf.png',
+            price: '999 грн.',
+            p: 'Хочеш отримати екстрим та мега вражень одночасно? Тоді вперед ловити хвилі!'
+        }
+    ]
+
+mixin pricelist (items)
+    .pricecards
+        for item in items
+            div.priceitem
+                img(src=item.img, alt="")
+                h4 #{item.name}
+                p #{item.p}
+                div.test
+                    h5 #{item.price}
+                    a(href='#').pricebtn замовити ➲
