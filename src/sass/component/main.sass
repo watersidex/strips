@@ -1,12 +1,20 @@
 .tai
     display: flex
+    flex-direction: column
     padding-bottom: 50px
     padding-top: 50px
+
+    +media (1200)
+        flex-direction: row
 
     &content
         display: flex
         flex-wrap: wrap
+        flex-direction: column
         width: 100%
+
+        +media (1200)
+            flex-direction: row
 
         h4
             width: 100%
@@ -26,6 +34,10 @@
 
     &flex
         display: flex
+        flex-direction: column
+
+        +media (1200)
+            flex-direction: row
 
     &main
         width: 100%
@@ -53,7 +65,8 @@
 
         img
             position: absolute
-            left: 222px
+            left: 50%
+            transform: translateX(-50%)
 
 .preloader
     width: 100%
@@ -73,12 +86,22 @@
     padding-bottom: 15px
     font-style: italic
 
-.transpe
+.transpe::before,
+.transpe::after
+    content: ''
     position: absolute
     opacity: 0.102
-    width: 570px
+    width: 200px
     height: 236px
     border: 4px solid #fff
+
+.transpe::before
+    border-right: none
+    left: 0
+
+.transpe::after
+    border-left: none
+    right: 0
 
 .p
     text-align: center
@@ -88,7 +111,8 @@
     font-size: 78px
     margin: 0
     top: -20%
-    left: 53%
+    left: 50%
+    transform: translateX(-50%)
 
 .ol
     font-size: 18px
@@ -97,7 +121,7 @@
     text-align: center
 
 .tx
-    margin-left: 60px
+    padding: 0 60px
     margin-top: 68px
 
 .prise
@@ -113,9 +137,17 @@
 
 .pricecards
     display: flex
+    flex-direction: column
+
+    +media (768)
+        flex-direction: row
+        flex-wrap: wrap
+
+    +media (1024)
+        flex-direction: row
+        flex-wrap: nowrap
 
 .priceitem
-    margin-right: 35px
     padding: 15px
     width: 270px
     height: 332px
@@ -140,6 +172,9 @@
         background-color: #fff
         filter: drop-shadow(0 4px 10.5px rgba(3, 20, 31, .05))
 
+    img
+        width: 100%
+
 .test
     display: flex
     justify-content: space-between
@@ -153,16 +188,29 @@
 
 .inform
     display: flex
-    margin-top: 50px
+    flex-direction: column
+    //margin-top: 50px
+    column-gap: 30px
+    row-gap: 30px
+
+    +media (1200)
+        flex-direction: row
 
     h4
         font-size: 36px
+        width: 270px
         text-transform: uppercase
-        margin-right: 50px
         color: #333333
 
     &card
+        position: relative
         display: flex
+        flex-direction: column
+        column-gap: 30px
+        row-gap: 30px
+
+        +media (768)
+            flex-direction: row
 
         p
             font-size: 13px
@@ -175,23 +223,35 @@
             font-weight: 400
             font-family: "Rubik"
             span
+                display: block
+                padding-left: 45px
                 font-size: 13px
                 color: #bbbbbb
 
+        img
+            float: left
+            margin-right: 15px
+
         .download
+            position: absolute
+            bottom: 30px
             font-size: 12px
             text-transform: uppercase
             color: #ffb700
             text-align: center
             border: 1px solid #ffb700
             border-radius: 15px
-            padding: 5px
+            padding: 0 10px
+
+    &question
+        position: relative
+        width: 270px
 
 .graf
     width: 238px
     height: 238px
     padding: 15px
-    margin-right: 50px
+    //margin-right: 50px
     background-image: url('../img/house.png')
     background-size: cover
     background-position: center
@@ -200,21 +260,30 @@
     width: 238px
     height: 238px
     padding: 15px
-    margin-right: 50px
+    //margin-right: 50px
     background-image: url('../img/height.png')
     background-size: cover
     background-position: center
 
-.border
+.border::before,
+.border::after
+    content: ''
     position: absolute
-    width: 270px
+    width: 50px
     height: 269px
     border: 4px solid #ffb700
+
+.border::before
+    border-right: none
+    left: 0
+.border::after
+    border-left: none
+    right: 0
 
 .question
     position: relative
     text-align: center
-    padding-left: 15px
+    bottom: 18px
 
     p
         margin: 0
@@ -229,8 +298,9 @@
 
     .img
         position: absolute
-        top: 110%
-        left: 30%
+        top: 120%
+        left: 50%
+        transform: translateX(-50%)
 
     .small
         padding-bottom: 20px
