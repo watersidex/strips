@@ -36,28 +36,32 @@ mixin menu (items)
             name: 'Тур на велосипедах', 
             img: 'img/bic.png',
             price: '335 грн*',
-            p: 'Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.'
+            p: 'Подорожуючи  на велосипеді, ви поринете в атмосферу мальовничих гір, чарівнмх краєвидів та шалених пригод.',
+            star:false 
         }, {
             name: 'Екскурсія на острів', 
             img: 'img/round.png',
             price: '500 грн*',
-            p: 'Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .'
+            p: 'Подорож на острів занурить Вас у незабутнні пригоди. Неймовірна краса  у будь-яку пору року .',
+            star:true
         }, {
             name: 'Особливе замовлення', 
             img: 'img/pers.png',
             price: '250 грн.*',
-            p: 'Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.'
+            p: 'Обираючи цю подорож, Ви самостійно робите її незабутнбою та не схожою на будь-які інші.',
+            star:true
         }
     ]
 
 mixin priceCards (items)
-    .cards
-        for item in items
-            div.card
-                img(src=item.img, alt="")
-                h4 #{item.name}
-                h5 #{item.price}
-                p #{item.p}
+    for item in items
+        div.card
+            if (item.star)
+                .star
+            img(src=item.img, alt="")
+            h4 #{item.name}
+            h5 #{item.price}
+            p #{item.p}
 
 -
     let price=[
@@ -70,7 +74,8 @@ mixin priceCards (items)
             name: 'Велотур', 
             img: 'img/price/bike.png',
             price: '555 грн.',
-            p: 'Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!'
+            p: 'Бажаєте прокататись з вітерцем, та ще й з критим краєвидом довкола? Тоді швидше замовляй велотур!',
+            bluelineimg: 'img/icons/bluebike.png'  
         }, {
             name: 'На острови!', 
             img: 'img/price/tropic.png',
@@ -88,6 +93,10 @@ mixin pricelist (items)
     .pricecards
         for item in items
             div.priceitem
+                if (item.bluelineimg)
+                    .blueline
+                        img(src=item.img, alt="")
+                .star
                 img(src=item.img, alt="")
                 h4 #{item.name}
                 p #{item.p}

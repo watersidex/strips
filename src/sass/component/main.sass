@@ -172,8 +172,10 @@
 .pricecards
     display: flex
     flex-direction: column
+    row-gap: 30px
 
     +media (768)
+        column-gap: 30px
         flex-direction: row
         flex-wrap: wrap
 
@@ -182,7 +184,7 @@
         flex-wrap: nowrap
 
 .priceitem
-    padding: 15px
+    position: relative
     width: 270px
     height: 332px
     transition: all 1s ease
@@ -190,6 +192,12 @@
     p
         font-size: 13px
         color: #999999
+        padding: 0 20px
+        margin: 5px 0
+
+    h4
+        padding: 0 20px
+        margin: 15px 0
 
     h5
         font-size: 24px
@@ -211,7 +219,12 @@
 
 .test
     display: flex
+    position: absolute
+    bottom: 0
+    width: 100%
+    box-sizing: border-box
     justify-content: space-between
+    padding: 0 20px
 
 .h4
     font-size: 36px
