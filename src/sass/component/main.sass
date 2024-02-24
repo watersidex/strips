@@ -2,8 +2,8 @@
 .tai
     display: flex
     flex-direction: column
-    padding-bottom: 50px
-    padding-top: 50px
+    padding-bottom: 77px
+    padding-top: 77px
 
     +media (1024)
         flex-direction: row
@@ -29,8 +29,12 @@
         +media (768)
             width: calc(100% - 317px)
 
-    &img img
+.taiimg
+    padding: 0 25px
+
+    img
         width: 100%
+        object-fit: none
         height: 270px
 
         +media(480)
@@ -38,6 +42,7 @@
 
         +media(1024)
             width: 100%
+
 
 .wave
     background-image: url('../img/wave.png')
@@ -75,17 +80,18 @@
         position: relative
         width: 100%
         margin: 113px 0
+        padding-bottom: 58px
         color: #fff
 
         +media(1024)
             width: 50%
-            margin: 113px 80px
+            margin: 113px 30px
 
         img
             position: absolute
             left: 50%
             bottom: 0
-            transform: translate(-50%, -50%)
+            transform: translate(-50%, 50%)
 
 .preloader
     width: 100%
@@ -123,17 +129,23 @@
 
 .transpe::before
     border-right: none
-    left: 20px
+    left: 0
 
     +media(1024)
         left: 0
 
+    +media(568)
+        left: 20px
+
 .transpe::after
     border-left: none
-    right: 20px
+    right: 0
 
     +media(1024)
         right: 0
+
+    +media(568)
+        right: 20px
 
 .p
     text-align: center
@@ -168,13 +180,14 @@
     text-align: center
 
 .price
-    margin-top: 50px
+    margin-top: 77px
     margin-bottom: 50px
 
 .pricecards
     display: flex
     flex-direction: column
     row-gap: 30px
+    margin-bottom: 77px 
 
     +media (768)
         column-gap: 30px
@@ -263,7 +276,7 @@
     justify-content: center
     align-content: center
     flex-wrap: wrap
-    //margin-top: 50px
+    margin-top: 77px
     column-gap: 30px
     row-gap: 30px
 
