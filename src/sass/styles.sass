@@ -82,7 +82,7 @@ h1
     display: flex
     justify-content: space-between
     align-items: center
-    padding-top: 30px
+    padding-top: 10px
 
 .menu
     display: none
@@ -104,6 +104,8 @@ h1
 
 .menu a
     color: white
+    font-size: 14rem
+    font-family: Rubik
     transition: 1s all ease
 
     &:hover
@@ -157,15 +159,23 @@ h1
 .midtop,
 .buttop
     text-align: center
-    padding: 190px 0
+    padding: 130px 0 100px
 
 .midtop h1
     color: white
     text-align: center
     font-size: 30px
+    margin: 0
+    font-weight: 400
+    padding-top: 45px
     +media (768)
         font-size: 71px
     text-transform: uppercase
+
+.midtop p
+    margin: 0 auto
+    padding: 20px 0
+    max-width: 560px
 
 .midtop p,
 .buttop p
@@ -197,10 +207,16 @@ h1
 
 .buttop h2
     font-size: 36px
+    font-weight: 400
+    max-width: 320px
     text-transform: uppercase
+
+.buttop p
+    padding: 20px 0
 
 .buttop h2,
 .buttop p
+    margin: 0 auto
     color: #333
 
 .middle
@@ -220,6 +236,7 @@ h1
 .pricard h4
     font-size: 18px
     color: #333
+    margin: 20px 0 12px
     text-align: center
 
 .card h5
@@ -231,13 +248,16 @@ h1
 .card p,
 .pricard p,
 .small
+    line-height: 19px
     font-size: 13px
+    text-align: left
     color: #999
 
 .card img,
 .pricard img
     width: 55px
     height: 50px
+    margin-top: 15px
     text-align: center
 
 .card
