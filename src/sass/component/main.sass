@@ -35,8 +35,8 @@
 
     img
         width: 100%
-        object-fit: none
         height: 270px
+        object-fit: none
 
         +media(480)
             width: 270px
@@ -45,10 +45,10 @@
             width: 370px
 
 .wave
+    padding: 100px 0
     background-image: url('../img/wave.png')
     background-size: cover
     background-position: center
-    padding: 100px 0
 
     &flex
         display: flex
@@ -68,34 +68,34 @@
             color: #0099ff
 
         h4
-            font-size: 56px
-            letter-spacing: 2px
             margin: 0
+            font-size: 56px
             text-transform: uppercase
             text-align: center
+            letter-spacing: 2px
 
             +media (768)
                 text-align: left
 
         p
-            font-size: 16px
-            line-height: 24px
-            max-width: 450px
             margin: 30px 0
+            max-width: 450px
             color: #fff
+            font-size: 16px
             font-family: "PT Sans"
+            line-height: 24px
 
     &feed
         position: relative
-        width: 100%
         margin: 20px 0
-        height: min-content
         padding-bottom: 35px
+        width: 100%
+        height: min-content
         color: #fff
 
         +media(1024)
-            width: 50%
             margin: 20px 0 20px 20px
+            width: 50%
 
         img
             position: absolute
@@ -107,33 +107,33 @@
             text-align: center
 
 .preloader
-    width: 100%
-    height: 100vh
-    top: 0
-    left: 0
     position: fixed
-    background-color: #0099ffc5
     display: flex
     justify-content: center
     align-items: center
+    top: 0
+    left: 0
+    width: 100%
+    height: 100vh
+    background-color: #0099ffc5
 
 .all
-    color: white
-    line-height: 25px
-    font-size: 16px
     margin: 0
     padding-bottom: 15px
+    color: white
+    font-size: 16px
     font-style: italic
+    line-height: 25px
 
 .transpe::before,
 .transpe::after
     content: ''
     position: absolute
-    opacity: 0.102
+    top: 0
     width: 81px
     height: 100%
-    top: 0
     border: 4px solid #fff
+    opacity: 0.102
 
     +media(768)
         width: 150px
@@ -142,8 +142,8 @@
         width: 200px
 
 .transpe::before
-    border-right: none
     left: 0
+    border-right: none
 
     +media(1024)
         left: 0
@@ -152,8 +152,8 @@
         left: 20px
 
 .transpe::after
-    border-left: none
     right: 0
+    border-left: none
 
     +media(1024)
         right: 0
@@ -162,35 +162,35 @@
         right: 20px
 
 .p
-    text-align: center
-    margin-left: 60px
-    color: #ffb700
     position: absolute
-    font-size: 78px
-    margin: 0
     top: 0
     left: 50%
+    margin: 0
+    margin-left: 60px
+    color: #ffb700
+    font-size: 78px
+    text-align: center
     transform: translate(-50%, -50%)
 
 .ol
-    font-size: 18px
     margin: 0
     color: #ffffff
+    font-size: 18px
     text-align: center
 
 .tx
-    padding: 0 30px
     margin-top: 30px
     margin-bottom: 20px
+    padding: 0 30px
 
     +media (768)
-        padding: 0 35px
         margin-top: 35px
+        padding: 0 35px
 
 .prise
-    font-size: 16px
     margin-bottom: 50px
     color: #333
+    font-size: 16px
     font-style: italic
     text-align: center
 
@@ -205,9 +205,9 @@
     margin-bottom: 77px
 
     +media (768)
-        column-gap: 30px
-        flex-direction: row
         flex-wrap: wrap
+        flex-direction: row
+        column-gap: 30px
 
     +media (1024)
         flex-direction: row
@@ -215,36 +215,36 @@
 
 .priceitem
     position: relative
+    padding-bottom: 55px
     width: 270px
     //height: 332px
-    padding-bottom: 55px
     transition: all 1s ease
 
     p
-        font-size: 13px
-        color: #999999
-        padding: 0 20px
         margin: 5px 0
+        padding: 0 20px
+        color: #999999
+        font-size: 13px
 
     h4
-        padding: 0 20px
         margin: 15px 0
+        padding: 0 20px
 
     h5
-        font-size: 20px
         margin: 0
-        white-space: nowrap
         color: #0099ff
+        font-size: 20px
+        white-space: nowrap
 
         +media(1440)
             font-size: 24px
 
     a
+        color: #ffb700
         font-size: 13px
         text-transform: uppercase
-        white-space: nowrap
-        color: #ffb700
         text-align: center
+        white-space: nowrap
 
     &:hover
         background-color: #fff
@@ -258,55 +258,55 @@
     position: absolute
     top: 0
     left: 0
-    background-color: #0099ff
     width: 60px
     height: 185px
+    background-color: #0099ff
 
     img
+        margin: 77px 10px
         width: 40px
         height: 35px
-        margin: 77px 10px
 
 .test
-    display: flex
     position: absolute
     bottom: 0
+    align-items: center
+    justify-content: space-between
+    display: flex
+    padding: 0 20px
     width: 100%
     box-sizing: border-box
-    justify-content: space-between
-    align-items: center
-    padding: 0 20px
 
 .h4
-    font-size: 36px
-    text-transform: uppercase
     margin: 0
     color: #333333
+    font-size: 36px
+    text-transform: uppercase
     text-align: center
     text-align: center
 
 .inform
-    display: flex
     flex-direction: column
     justify-content: center
     align-content: center
     flex-wrap: wrap
-    margin-top: 77px
+    display: flex
     column-gap: 30px
     row-gap: 30px
+    margin-top: 77px
 
     +media (1180)
         flex-direction: row
         flex-wrap: nowrap
 
     h4
-        font-size: 36px
-        letter-spacing: 1px
-        width: 270px
         margin: 10px 0
-        text-transform: uppercase
+        width: 270px
         color: #333333
+        font-size: 36px
+        text-transform: uppercase
         text-align: center
+        letter-spacing: 1px
 
         +media (768)
             text-align: left
@@ -322,22 +322,22 @@
             flex-direction: row
 
         p
-            font-size: 13px
-            color: #ffffff
-            line-height: 19px
             margin: 20px 0
+            color: #ffffff
+            font-size: 13px
+            line-height: 19px
 
         a
-            font-size: 18px
-            line-height: 24px
             color: #ffffff
+            font-size: 18px
             font-weight: 400
             font-family: "Rubik"
+            line-height: 24px
             span
                 display: block
                 padding-left: 45px
-                font-size: 13px
                 color: #bbbbbb
+                font-size: 13px
 
         img
             float: left
@@ -346,27 +346,27 @@
         .download
             position: absolute
             bottom: 30px
+            padding: 0 15px
             font-size: 12px
-            text-transform: uppercase
             color: #ffb700
+            text-transform: uppercase
             text-align: center
             border: 2px solid #ffb700
             border-radius: 15px
             transition: all 1s ease
-            padding: 0 15px
 
             &:hover
-                background-color: #ffb700
                 color: #fff
+                background-color: #ffb700
 
     &question
         position: relative
         width: 270px
 
 .graf
+    padding: 20px
     width: 228px
     height: 228px
-    padding: 20px
     //margin-right: 50px
     background-image: url('../img/house.png')
     background-size: cover
@@ -390,30 +390,31 @@
     border: 4px solid #ffb700
 
 .border::before
-    border-right: none
     left: 0
+    border-right: none
+
 .border::after
-    border-left: none
     right: 0
+    border-left: none
 
 .question
     position: relative
-    text-align: center
     bottom: 20px
+    text-align: center
 
     p
         margin: 0
-        text-align: center      
         padding: 10px
         font-size: 18px
         font-weight: 400
+        text-align: center      
 
     a
-        font-size: 18px
-        color: #0099ff
         margin-top: 5px
-        text-align: center
         margin-left: 5px
+        color: #0099ff
+        font-size: 18px
+        text-align: center
 
     .img
         position: absolute
@@ -422,13 +423,13 @@
         transform: translate(-50%, -50%)
 
     .small
-        font-size: 13px
         padding: 20px 60px
+        font-size: 13px
 
     .smalll
-        font-size: 13px
         padding: 0
         color: #999999
+        font-size: 13px
         font-family: "PT Sans"
         text-align: center
 
