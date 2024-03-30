@@ -11,6 +11,8 @@ html(lang="en")
 
         
     body 
+        img(src="img/s-trips.jpg").control-test
+        
         header.top 
             .wrapper
                 .topmenu 
@@ -37,7 +39,8 @@ html(lang="en")
                         a(href="#").butt детальніше
                         p.small * - зверніть увагу, зміна ціни може залежати від курсу долара.
                     +priceCards(cards)
-                p.plans дивитись усі плани ➲
+                p.plans 
+                    a(href="#") дивитись усі плани ➲
                 hr
                 .tai 
                     .taiimg
