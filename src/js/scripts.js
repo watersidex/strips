@@ -10,3 +10,9 @@ const preloader = document.querySelector('.preloader')
 window.onload = () => {
     document.querySelector(".preloader").style.display = "none";
 }
+
+const but = document.querySelector('.butt')
+const inputform = document.querySelector('.contactForm')
+but.onclick = function () {
+    inputform.classList.toggle('showForm')
+}

@@ -11,7 +11,6 @@ html(lang="en")
 
         
     body 
-        img(src="img/s-trips.jpg").control-test
         
         header.top 
             .wrapper
@@ -39,8 +38,8 @@ html(lang="en")
                         a(href="#").butt детальніше
                         p.small * - зверніть увагу, зміна ціни може залежати від курсу долара.
                     +priceCards(cards)
-                p.plans 
-                    a(href="#") дивитись усі плани ➲
+                
+                a.plans(href="#") дивитись усі плани ➲
                 hr
                 .tai 
                     .taiimg
@@ -106,4 +105,27 @@ html(lang="en")
                                 img.img(alt="консультант", src="img/icons/women.png")
         footer
             p &copy; 2016 Cars.com All rights reserved.
+
+        .contactForm 
+            form(action="#")
+
+                h2 Отримати допомогу
+
+                label
+                    input(type="text" required placeholder="Прізвище")
+                    span Прізвище
+
+                label
+                    input(type="text" required placeholder="Ім'я") 
+                    span Ім'я
+
+                label
+                    input(type="text" required placeholder="Номер телефону") 
+                    span Номер телефону
+
+                .mButt
+                    a(href="/").butt Підтвердити
+                    a(href="/").butt.blue Скасувати
+
+        
         script(src="js/scripts.js") 
