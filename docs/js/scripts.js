@@ -9,7 +9,6 @@ window.onload = () => {
 };
 const but = document.querySelector(".butt"),
     inputform = document.querySelector(".contactForm");
-but.onclick = function (event) {
-    event.preventDefault()
+but.onclick = function () {
     inputform.classList.toggle("showForm")
 };
